@@ -132,4 +132,4 @@ public class LoginController implements Initializable {
 }
 }
 
-//Quitar los comentarios de Chat, problema de alerta solucionado
+//Quitar los comentarios de Chat, problema de alerta solucionado    

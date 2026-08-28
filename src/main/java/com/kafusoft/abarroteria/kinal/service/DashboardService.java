@@ -13,15 +13,21 @@ public class DashboardService {
     }
     
     public ObservableList<Producto> findProducto(){
+        ObservableList<Producto> productos = productoRepository.findAll();
         
-        if(productoRepository.findAll() == null){
-            
+        if(productos == null){
             throw new RuntimeException("Sin productos.");
-        }else{
-        
-        return productoRepository.findAll();
         }
         
+        return productos;
+    }
+    
+    public boolean eliminarProducto(String idProducto){
+        if(idProducto == null || idProducto.isBlank()){
+            throw new IllegalArgumentException("El ID del producto es obligatorio.");
+        }
+        
+        return productoRepository.deleteById(idProducto);
     }
     
 }

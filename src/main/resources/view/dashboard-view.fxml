@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -26,7 +27,14 @@
           <RowConstraints maxHeight="78.19998779296873" minHeight="7.800024414062477" prefHeight="73.79998779296875" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Pane layoutX="-55.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnEliminarProducto" layoutY="14.0" mnemonicParsing="false" onAction="#handleEliminarProducto" prefHeight="25.0" prefWidth="137.0" text="Eliminar producto" />
+                     </children>
+                  </Pane>
+               </children></Pane>
             <TableView fx:id="tableProducto" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <columns>
                 <TableColumn fx:id="tableColumnIdProducto" prefWidth="75.0" text="ID" />
@@ -35,6 +43,7 @@
                   <TableColumn fx:id="tableColumnPrecio" prefWidth="75.0" text="precio" />
               </columns>
             </TableView>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>
